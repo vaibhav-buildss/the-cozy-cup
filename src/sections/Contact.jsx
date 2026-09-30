@@ -159,8 +159,8 @@ function Contact() {
               </button>
 
               <p className="text-center text-[9px] leading-5 text-[#756a62]/60">
-                Contact/WhatsApp details have not been provided yet, so this
-                form is currently a front-end demo.
+                This contact form is a front-end demo. For placing an order,
+                use the WhatsApp ordering option.
               </p>
             </form>
           </motion.div>

@@ -28,6 +28,34 @@ function Navbar() {
     setOpen(false);
   };
 
+  const handleSectionClick = (event, href) => {
+    event.preventDefault();
+    closeMenu();
+
+    const scrollToTarget = () => {
+      const target = document.getElementById(href.slice(1));
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    };
+
+    if (window.location.hash === href) {
+      scrollToTarget();
+      return;
+    }
+
+    window.location.hash = href;
+
+    // When coming from Cart/Checkout, React needs one render to bring
+    // the Home sections back before the target can be scrolled into view.
+    window.setTimeout(scrollToTarget, 0);
+    window.setTimeout(scrollToTarget, 80);
+  };
+
   const openCart = () => {
     setOpen(false);
     setCartOpen(true);
@@ -71,6 +99,7 @@ function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
+                    onClick={(event) => handleSectionClick(event, link.href)}
                     className="rounded-full px-4 py-2 text-xs font-medium text-white/65 transition hover:bg-white/10 hover:text-white"
                   >
                     {link.label}
@@ -166,7 +195,7 @@ function Navbar() {
                       <motion.a
                         key={link.href}
                         href={link.href}
-                        onClick={closeMenu}
+                        onClick={(event) => handleSectionClick(event, link.href)}
                         initial={{
                           opacity: 0,
                           x: -10,

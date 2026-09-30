@@ -11,12 +11,18 @@ function AppContent() {
 
   useEffect(() => {
     const handleHashChange = () => {
-      setPage(window.location.hash);
+      const nextHash = window.location.hash;
+      setPage(nextHash);
 
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
+      // Section links (#about, #menu, etc.) should be handled by the
+      // browser's native anchor scrolling. Only full-page views such as
+      // the cart and checkout should jump back to the top.
+      if (nextHash === "#cart" || nextHash === "#checkout") {
+        window.scrollTo({
+          top: 0,
+          behavior: "instant",
+        });
+      }
     };
 
     window.addEventListener(

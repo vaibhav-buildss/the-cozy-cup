@@ -426,118 +426,29 @@ select:focus-visible {
 }
 
 /* =========================================================
-   BUTTON CONTRAST SYSTEM
+   BUTTON / CTA CONTRAST
+   Keep these rules scoped to actual clickable elements so they
+   cannot accidentally recolor text inside cards, sections or
+   navigation overlays.
    ========================================================= */
 
-/* Dark buttons = ALWAYS light text */
-.bg-\[\#1d1713\] {
-  color: #ffffff;
-}
-
-/* Brown buttons = ALWAYS light text */
-.bg-\[\#8b5e3c\] {
-  color: #ffffff;
-}
-
-/* Dark button hover */
-.hover\:bg-\[\#8b5e3c\]:hover {
-  color: #ffffff;
-}
-
-/* Light buttons = ALWAYS dark text */
-.bg-white {
+button.bg-\[\#f5efe6\],
+a.bg-\[\#f5efe6\] {
   color: #1d1713;
 }
 
-/* Light beige buttons */
-.bg-\[\#eadbc9\] {
-  color: #1d1713;
-}
-
-/* Prevent nested text/icon elements from inheriting
-   an accidental light color on light buttons */
-.bg-white *,
-.bg-\[\#eadbc9\] * {
-  color: inherit;
-}
-
-/* Dark buttons keep icons/text readable */
-.bg-\[\#1d1713\] *,
-.bg-\[\#8b5e3c\] * {
-  color: inherit;
-}
-
-/* White button hover */
-.hover\:bg-\[\#eadbc9\]:hover {
-  color: #1d1713;
-}
-
-/* White button hover -> dark text */
-.hover\:bg-white:hover {
-  color: #1d1713;
-}
-
-/* Stronger contrast for primary CTA buttons */
-button.bg-white,
-a.bg-white,
-button.bg-\[\#eadbc9\],
-a.bg-\[\#eadbc9\] {
-  color: #1d1713;
-}
-
-/* Stronger contrast for dark CTA buttons */
 button.bg-\[\#1d1713\],
-a.bg-\[\#1d1713\],
+a.bg-\[\#1d1713\] {
+  color: #f5efe6;
+}
+
 button.bg-\[\#8b5e3c\],
 a.bg-\[\#8b5e3c\] {
   color: #ffffff;
 }
 
-/* Keep disabled controls visually understandable */
 button:disabled,
 a[aria-disabled="true"] {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-/* =========================================================
-   BUTTON HOVER CONTRAST
-   ========================================================= */
-
-.bg-white:hover {
-  color: #1d1713;
-}
-
-.bg-\[\#1d1713\]:hover {
-  color: #ffffff;
-}
-
-.bg-\[\#8b5e3c\]:hover {
-  color: #ffffff;
-}
-
-/* =========================================================
-   NAV / PILL CONTRAST
-   ========================================================= */
-
-.rounded-full.bg-white {
-  color: #1d1713;
-}
-
-.rounded-full.bg-\[\#1d1713\] {
-  color: #ffffff;
-}
-
-/* =========================================================
-   ICON CONTRAST
-   ========================================================= */
-
-.bg-white svg,
-.bg-\[\#eadbc9\] svg {
-  color: #1d1713;
-}
-
-.bg-\[\#1d1713\] svg,
-.bg-\[\#8b5e3c\] svg {
-  color: #ffffff;
 }

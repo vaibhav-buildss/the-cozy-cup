@@ -13,9 +13,9 @@ const business = {
     "Students, young professionals, families, friends, and casual meetups.",
 
   contact: {
-    phone: "",
-    phoneTel: "",
-    whatsapp: "",
+    phone: "+91 97378 13654",
+    phoneTel: "+919737813654",
+    whatsapp: "919737813654",
     email: "",
   },
 

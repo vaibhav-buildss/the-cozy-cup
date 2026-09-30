@@ -101,7 +101,8 @@ function Hero() {
             <div className="flex shrink-0 gap-3">
               <a
                 href="#menu"
-                className="group inline-flex items-center gap-3 bg-white px-5 py-3.5 text-[9px] font-bold uppercase tracking-[0.2em] text-[#1d1713] transition duration-300 hover:bg-[#f1e8dc]"
+                className="group inline-flex items-center gap-3 bg-white px-5 py-3.5 text-[9px] font-bold uppercase tracking-[0.2em] transition duration-300 hover:bg-[#f1e8dc]"
+                style={{ color: "#1d1713" }}
               >
                 <span>
                   {hero?.primaryButton || "Explore the menu"}
@@ -111,12 +112,14 @@ function Hero() {
                   size={14}
                   strokeWidth={1.7}
                   className="transition-transform duration-300 group-hover:translate-x-1"
+                  style={{ color: "#1d1713" }}
                 />
               </a>
 
               <a
                 href="#location"
-                className="inline-flex items-center gap-2 border border-white/35 px-5 py-3.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white transition duration-300 hover:border-white hover:bg-white/10"
+                className="inline-flex items-center gap-2 border border-white/35 px-5 py-3.5 text-[9px] font-bold uppercase tracking-[0.2em] transition duration-300 hover:border-white hover:bg-white/10"
+                style={{ color: "#ffffff" }}
               >
                 {hero?.secondaryButton || "Visit us"}
               </a>

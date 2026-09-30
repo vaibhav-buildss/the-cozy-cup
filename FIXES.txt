@@ -1,0 +1,10 @@
+THE COZY CUP - FIXES
+
+Applied:
+1. WhatsApp order number set to +91 97378 13654.
+2. Navbar section navigation fixed for one-click smooth scrolling.
+3. Button/UI contrast rules scoped to clickable elements.
+4. Hero primary and secondary CTA text/icon colors explicitly pinned to prevent Tailwind/global CSS color conflicts.
+5. Existing café layout, content, images and design were preserved.
+
+Use the existing public/, dist/ and node_modules/ from the original project if they are not included in this source archive.
